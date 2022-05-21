@@ -1,0 +1,44 @@
+
+.header-text{
+    margin: 1%;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.container-fluid{
+    height: 100vh;
+    background-color:#DA1E2D;
+}
+
+.container-elements{
+    min-height: 50vh;
+    margin: 3%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Pokelist{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#98CB98;
+    margin-right: 2%;
+    width: 50%;
+    
+}
+
+.DetailCard{
+    background-color: #ffffff;
+    width: 50%;
+    margin-left:2%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-elements{
+    min-height: 50vh;
+    margin: 3%;
+    display: flex;
+    flex-direction: row;
+}
+  }
