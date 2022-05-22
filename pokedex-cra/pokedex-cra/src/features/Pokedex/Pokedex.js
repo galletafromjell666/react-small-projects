@@ -56,7 +56,7 @@ class Pokedex extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <h1 className="header-text">Pokedex</h1>
+        <img className="header-img" alt="pokemon icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"></img>
         <div className="container-elements">
         <div className="Pokelist">
           <Pokelist

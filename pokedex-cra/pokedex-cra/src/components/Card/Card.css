@@ -1,0 +1,12 @@
+.pokemonIcon{
+    filter: grayscale();
+    width: 50%;
+    height: auto;
+    transition: filter 0.4s ease-in-out;
+    
+    
+}
+
+.pokemonIcon:hover{
+    filter: none;
+}

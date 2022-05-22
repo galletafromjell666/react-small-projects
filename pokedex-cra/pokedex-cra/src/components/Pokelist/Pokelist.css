@@ -1,9 +1,8 @@
 .card-main{
 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-between;
-    flex-basis: 33%;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex-basis: 2;
 
 }
