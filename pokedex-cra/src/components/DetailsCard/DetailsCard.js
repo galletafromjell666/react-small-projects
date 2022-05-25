@@ -14,7 +14,7 @@ export class DetailCard extends React.Component {
       margin: "20px",
     };
     return (
-      <>{this.props.details.name ?  <div style={{ margin: "7%" }}>
+      <>{this.props.details.name ?  <div style={{ margin: "3%" }}>
       <h3 style={leftText}>Name: {this.props.details.name}</h3>
       <h3 style={leftText}>Order: {this.props.details.order}</h3>
       

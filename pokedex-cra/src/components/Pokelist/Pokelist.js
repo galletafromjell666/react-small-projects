@@ -17,7 +17,7 @@ export class Pokelist extends React.Component {
           <Card
             key={key}
             pokemon={this.props.pokemons[key]}
-            onClick={(u) => this.handleUpdateDetails(this.props.pokemons[key])}
+            myCustomOnClick={(u) => this.handleUpdateDetails(this.props.pokemons[key])}
           ></Card>
         ))}
       </div>
