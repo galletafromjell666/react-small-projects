@@ -2,7 +2,7 @@
 
 ### first
 ```sh
-npm start
+npm install
 ```
 
 ### then
