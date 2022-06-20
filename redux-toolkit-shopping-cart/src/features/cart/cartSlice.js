@@ -1,12 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import cartItems from "../../cartItems";
 
 const url = 'https://course-api.com/react-useReducer-cart-project'
 export const getCartItems = createAsyncThunk('cart/getItems',()=> {
   return fetch(url).then(response => response.json()).catch(console.log())
 })
 const initialState = {
-  cartItems: cartItems,
+  cartItems: [],
   amount: 4,
   total: 0,
   isLoading: true,
