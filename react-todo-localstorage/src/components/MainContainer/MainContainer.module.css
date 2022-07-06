@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+.mainContainer {
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  margin: auto;
+  background-color: #e1e8f0;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 20px;
+}
+.mainText {
+  font-family: "Caveat", cursive;
+  font-size: 2.5em;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.newIcon {
+  font-size: 30px;
+  color: #6c5567;
+}
+.newIcon:hover {
+  color: #493a46;
+}
+.newButtonContainer {
+  margin: 10px auto 10px 10px;
+}
+
+.emptyMessageContainer {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  margin: 5%;
+  font-family: "Caveat", cursive;
+  font-size: 1.1em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.emptyMessageContainerText {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin: 2%
+}
+.emptyMessageContainerButton {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}

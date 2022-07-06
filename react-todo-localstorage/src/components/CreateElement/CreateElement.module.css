@@ -1,0 +1,31 @@
+.createElementModal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.formBody{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 550px;
+    height: 200px;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.buttons{
+    
+    margin: 10px
+}
