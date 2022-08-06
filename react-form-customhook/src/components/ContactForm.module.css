@@ -1,0 +1,72 @@
+.mainText {
+  font-weight: 400;
+  font-size: large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.flexContainer {
+  height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input {
+  font-size: large;
+  width: 225px;
+  height: 30px;
+}
+
+.inputTextArea {
+  margin-top: 70px;
+  font-size: large;
+  width: 225px;
+  height: 100px;
+   resize:none;
+}
+.errorText {
+  margin-left: 10px;
+  font-weight: 300;
+  font-size: medium;
+  color: brown;
+}
+
+.containerInput {
+  margin-top: 10px;
+  height: 75px;
+}
+
+.containerInputTextArea {
+  margin-top: 10px;
+  height: auto;
+  margin-bottom: 90px;
+ 
+}
+
+.containerButton {
+  margin-top: 95px;
+  display: flex;
+  justify-content: center;
+}
+
+.formSubmitButton {
+  font-size:large;
+  font-style: bold;
+  width: 100px;
+  height: 40px;
+  background:  #dbb5f2;
+  color: rgb(25, 25, 25);
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+  padding: 0;
+}
+.formSubmitButton:hover {
+  background: #efd7fd;
+  color: rgb(161, 161, 161);
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+}
