@@ -9,13 +9,13 @@ const index = () => {
       <div>
         {pokmData  ? (
           <ul>
-            {pokmData.results.map((poke) => {
+            {pokmData.results.map((poke, index) => {
               return (
-                <div key={poke.id} className="h-[35px]">
+                <li key={index} className="h-[35px]">
                   <Link to={`pokemon/${poke.name}`}>
                     <h1> {poke.name}</h1>
                   </Link>
-                </div>
+                </li>
               );
             })}
           </ul>
