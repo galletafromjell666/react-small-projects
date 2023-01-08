@@ -4,13 +4,6 @@ import { pokeApi } from "../services/pokeApi";
 
 export const rootLoader = async () => {
   //first gen includes 151 pkm
-  /*
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=30`);
-  // console.log(response);
-  const pokm = await response.json();
-  // console.log(pokm);
-  return { pokm }; */
-
   const apiPromise = store.dispatch(pokeApi.endpoints.getAllPokemon.initiate());
   try {
     const response = await apiPromise;
