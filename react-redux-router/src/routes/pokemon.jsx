@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import PokeCard from "../components/PokeCard";
 
 export const pokemonLoader = async ({ params }) => {
   const response = await fetch(
@@ -10,12 +11,9 @@ export const pokemonLoader = async ({ params }) => {
 };
 const Pokemon = () => {
   const { singlePkm: data } = useLoaderData();
-  let print = {}
-  if(data!== undefined){
-    print = JSON.stringify(data) 
-  }
   return <div className="w-full h-[40px] bg-amber-300">pokemon
-  <p>{print}</p>
+  {data ? <PokeCard {...data}/> : <h1>error u.u</h1>}
+  
   </div>;
 };
 

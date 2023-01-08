@@ -1,15 +1,17 @@
-import { useRouteLoaderData, Link } from "react-router-dom";
+import { useGetAllPokemonQuery } from "../services/pokeApi";
+import { Link } from "react-router-dom";
 const index = () => {
-  const { pokm: pokmData } = useRouteLoaderData(`root`);
+  const { data : pokmData } = useGetAllPokemonQuery();
+  console.log(pokmData)
   return (
     <div className="w-full h-screen bg-green-300">
       <h1>INDEX</h1>
       <div>
-        {pokmData.results.length ? (
+        {pokmData  ? (
           <ul>
             {pokmData.results.map((poke) => {
               return (
-                <div key={poke.name} className="h-[35px]">
+                <div key={poke.id} className="h-[35px]">
                   <Link to={`pokemon/${poke.name}`}>
                     <h1> {poke.name}</h1>
                   </Link>
