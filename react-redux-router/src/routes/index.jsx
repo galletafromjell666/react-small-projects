@@ -5,7 +5,7 @@ const index = () => {
   const { data : pokmData } = useGetAllPokemonQuery();
   //console.log(pokmData)
   return (
-    <div className="w-full h-screen bg-green-300">
+    <div className="w-full h-auto bg-zinc-200">
       <h1>INDEX</h1>
       <div>
         {pokmData  ? (
