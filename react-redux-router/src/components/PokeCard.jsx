@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
+import PokeBall from "./../assets/pokeball.png";
 const PokeCard = ({ name, id, types, stats, sprites }) => {
   return (
     <div>
-      <div className="bg-stone-100 flex flex-col content-center items-center h-[200px]">
-        <img src={sprites.other.home.front_default} />
+      <div className="flex flex-col content-center items-center">
+        <div className="relative w-full h-[500px]">
+          <img className="absolute z-50 m-auto left-0 right-0 h-full" src={sprites.other.home.front_default} />
+          <img className="absolute z-10 m-auto bottom-0 left-0 right-0 spining-pokeball opacity-10 h-[90%]" src={PokeBall} />
+        </div>
+
         <span className="text-lg">{id}</span>
         <h1 className="text-2xl font-bold">{name}</h1>
         {types.map((type, index) => {

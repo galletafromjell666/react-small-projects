@@ -3,11 +3,26 @@
 @tailwind utilities;
 
 .typeName {
-    
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 255, 255, 0.4) 100%
-    );
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+.spining-pokeball {
+  animation: animName 4s linear infinite;
+}
+
+@keyframes animName {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
