@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
-import { Colors } from "../helpers/backgroundColor";
 import { useGetPokemonByNameQuery } from "../services/pokeApi";
 import PokeBall from './../assets/pokeball.png'
 const PreviewCard = ({ name }) => {
   const { data } = useGetPokemonByNameQuery(name);
   //let print = {};
-  console.log(`raw data = `, data);
+  console.log(`raw data pkm = `, data);
   let styleBgColor;
   if (data) {
-    styleBgColor = { backgroundColor: Colors[data.types[0].type.name] };
-    console.log(styleBgColor);
+    styleBgColor = { backgroundColor: data.color };
+    //console.log(styleBgColor);
   }
 
   return (

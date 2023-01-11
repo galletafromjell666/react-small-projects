@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
+import { Colors } from "../helpers/backgroundColor";
 export const pokeApi = createApi({
   reducerPath: "pokemonApi",
   baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/" }),
@@ -9,6 +9,10 @@ export const pokeApi = createApi({
     }),
     getPokemonByName: builder.query({
       query: (name) => `pokemon/${name}`,
+      transformResponse: (response) => {
+        response.color = Colors[response.types[0].type.name];
+        return response
+      },
     }),
   }),
 });
