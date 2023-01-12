@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import { store } from "../store";
 import { pokeApi } from "../services/pokeApi";
-import PokeCard from "../components/PokeCard";
+import DetailsContainer from "../components/DetailsContainer";
 export const pokemonLoader = async ({ params: { pokemonName } }) => {
   console.log(pokemonName);
   const apiPromise = store.dispatch(
@@ -25,7 +25,7 @@ const Pokemon = () => {
   }
   return (
     <div className="w-full h-auto" style={styleBgColor}>
-      {data ? <PokeCard {...data} /> : <h1>error u.u</h1>}
+      {data ? <DetailsContainer {...data} /> : <h1>error u.u</h1>}
     </div>
   );
 };
