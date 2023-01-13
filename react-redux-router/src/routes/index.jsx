@@ -2,28 +2,25 @@ import { useGetAllPokemonQuery } from "../services/pokeApi";
 import { Link } from "react-router-dom";
 import PreviewCard from "../components/PreviewCard";
 const index = () => {
-  const { data : pokmData } = useGetAllPokemonQuery();
+  const { data: pokmData } = useGetAllPokemonQuery();
   //console.log(pokmData)
   return (
-    <div className="w-full h-auto bg-zinc-200">
-      <h1>INDEX</h1>
-      <div>
-        {pokmData  ? (
-          <ul>
-            {pokmData.results.map((poke, index) => {
-              return (
-                <li key={index} className="">
-                  <Link to={`pokemon/${poke.name}`}>
-                   <PreviewCard {...poke}/>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        ) : (
-          <h1>Null</h1>
-        )}
-      </div>
+    <div className="flex items-center justify-center bg-white w-full">
+      {pokmData ? (
+        <div className="grid gap-x-28 gap-y-12 grid-cols-5">
+          {pokmData.results.map((poke, index) => {
+            return (
+              <div key={index} className="">
+                <Link to={`pokemon/${poke.name}`}>
+                  <PreviewCard {...poke} />
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <h1>Null</h1>
+      )}
     </div>
   );
 };

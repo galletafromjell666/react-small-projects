@@ -12,11 +12,11 @@ const PreviewCard = ({ name }) => {
   }
 
   return (
-    <div>
+    <>
       {data ? (
         <section
           style={styleBgColor}
-          className="relative max-w-[230px] max-h-[150px] rounded-xl m-12 overflow-hidden pt-3.5 pr-0 pb-2 pl-3"
+          className="relative max-w-[230px] max-h-[150px] rounded-xl overflow-hidden pt-3.5 pr-0 pb-2 pl-3"
         >
           <h1 className="capitalize font-bold tracking-tighter md:text-lg text-sm text-white">
             {data.name}
@@ -39,7 +39,7 @@ const PreviewCard = ({ name }) => {
                     <img className='absolute right-[-18px] bottom-[-10px] opacity-20' src={PokeBall} alt='Pokeball' />
                     <img
                         className='relative w-full h-auto right-[2px] bottom-[12px]'
-                        src={data.sprites.other.home.front_default}
+                        src={data.sprites.other["official-artwork"].front_default}
                         // src={img}
                         alt={data.name}
                     />
@@ -47,9 +47,14 @@ const PreviewCard = ({ name }) => {
             </figure>
         </section>
       ) : (
-        <h1>Something went wrong</h1>
+        <section
+        style={styleBgColor}
+        className="bg-zinc-500 max-w-[230px] max-h-[150px] rounded-xl m-12 overflow-hidden pt-3.5 pr-0 pb-2 pl-3"
+      >
+        Loading...
+        </section>
       )}
-    </div>
+    </>
   );
 };
 

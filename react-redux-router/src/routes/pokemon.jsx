@@ -17,14 +17,10 @@ export const pokemonLoader = async ({ params: { pokemonName } }) => {
 };
 const Pokemon = () => {
   const { data } = useLoaderData();
-  //console.log(data)
-  let styleBgColor;
-  if (data) {
-    styleBgColor = { backgroundColor: data.color };
-    //console.log(styleBgColor);
-  }
+  console.log(data)
+  
   return (
-    <div className="w-full h-auto" style={styleBgColor}>
+    <div className="w-full h-auto" >
       {data ? <DetailsContainer {...data} /> : <h1>error u.u</h1>}
     </div>
   );

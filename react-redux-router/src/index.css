@@ -20,9 +20,35 @@
     transform: rotate(0deg);
   }
   80% {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
+}
+
+a {
+  margin: 0 !important;
+}
+
+.curve {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 3rem 2rem;
+  width: 100%;
+  z-index: 2;
+}
+.curve::before {
+  content: "";
+  display: block;
+  background: var(--bgColor);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 150vw;
+  width: 300vw;
+  height: 300vw;
+  z-index: -1;
 }
