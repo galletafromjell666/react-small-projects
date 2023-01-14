@@ -47,7 +47,7 @@ a {
   bottom: 0;
   transform: translateX(-50%);
   border-radius: 150vw;
-  width: 300vw;
-  height: 300vw;
+  width: 150vw;
+  height: 150vw;
   z-index: -1;
 }

@@ -14,8 +14,34 @@ const DetailsContainer = ({
   return (
     <div>
       <div
+        id="pkmTest"
+        className={`text-slate-50 h-[calc(100vh-50px)]`}
+        style={{ backgroundColor: typeColor }}
+      >
+        <div className="h-full mx-10">
+          <div className="h-[20%]">
+            <div className="">
+              <span className="text-xl">#{id.toString().padStart(3, 0)}</span>
+              <h1 className="text-2xl capitalize font-bold">{name}</h1>
+            </div>
+          </div>
+          <div className="flex flex-row h-3/5 justify-center items-center">
+            <div className="w-3/4 flex flex-row justify-between h-full">
+              <div className="w-[25%]">height</div>
+              <div className="w-[75%]">
+                <img
+                  className="h-[90%] mx-auto"
+                  src={sprites.other["official-artwork"].front_default}
+                />
+              </div>
+            </div>
+            <div className="w-1/4 h-full">uwu</div>
+          </div>
+        </div>
+      </div>
+      <div
         className="curve flex flex-col py-6"
-        style={{ "--bgColor": typeColor }}
+        style={{ "--bgColor": "#FAFAFA" }}
       >
         <div className="w-full flex flex-row px-6 pb-4 justify-between">
           <h1 className="text-2xl capitalize font-bold">{name}</h1>

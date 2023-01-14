@@ -7,7 +7,7 @@ const index = () => {
   return (
     <div className="flex items-center justify-center bg-white w-full">
       {pokmData ? (
-        <div className="grid gap-x-28 gap-y-12 grid-cols-5">
+        <div className="grid gap-x-12 grid-cols-2 gap-y-12 md:grid-cols-5 md:gap-x-28 ">
           {pokmData.results.map((poke, index) => {
             return (
               <div key={index} className="">

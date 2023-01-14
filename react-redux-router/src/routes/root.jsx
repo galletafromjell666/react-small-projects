@@ -17,8 +17,7 @@ export const rootLoader = async () => {
 const Root = () => {
   return (
     <div className="w-full h-auto">
-      <div className="bg-stone-400 w-full h-auto">
-        root header
+      <div className="bg-stone-400 w-full h-[50px]">
         <Link to={`/`}>
           <button
             type="button"
