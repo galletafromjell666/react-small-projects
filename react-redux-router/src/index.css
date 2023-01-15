@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,23 +32,3 @@ a {
   margin: 0 !important;
 }
 
-.curve {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  width: 100%;
-  z-index: 2;
-}
-.curve::before {
-  content: "";
-  display: block;
-  background: var(--bgColor);
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  border-radius: 150vw;
-  width: 150vw;
-  height: 150vw;
-  z-index: -1;
-}
