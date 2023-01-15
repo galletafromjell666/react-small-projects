@@ -4,7 +4,7 @@ import PokeBall from './../assets/pokeball.png'
 const PreviewCard = ({ name }) => {
   const { data } = useGetPokemonByNameQuery(name);
   //let print = {};
-  console.log(`raw data pkm = `, data);
+  //console.log(`raw data pkm = `, data);
   let styleBgColor;
   if (data) {
     styleBgColor = { backgroundColor: data.color };

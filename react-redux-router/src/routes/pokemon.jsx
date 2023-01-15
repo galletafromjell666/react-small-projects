@@ -17,7 +17,7 @@ export const pokemonLoader = async ({ params: { pokemonName } }) => {
 };
 const Pokemon = () => {
   const { data } = useLoaderData();
-  console.log(data)
+  //console.log(data)
   
   return (
     <div className="w-full h-auto" >

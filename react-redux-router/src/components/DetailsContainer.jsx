@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import PokemonTypeIcon from "./PokemonTypeIcon";
 import WanaKanaWrapper from "./WanaKanaWrapper";
+import Paginator from "./Paginator";
 import Stats from "./Stats";
 const DetailsContainer = ({
   name,
@@ -14,7 +15,6 @@ const DetailsContainer = ({
 }) => {
   //console.log("stats", stats);
   return (
-    <div>
       <div
         id="pkmTest"
         className={`text-slate-50  h-[calc(100vh-50px)] `}
@@ -43,13 +43,12 @@ const DetailsContainer = ({
                     Height: <span className="font-normal">{height / 10}m</span>
                   </p>
                   <div className="absolute bottom-0 left-0 ml-[5rem]  w-[300%]">
-                  <WanaKanaWrapper
-                    parentClassName={"text-[6.4rem] w-fit text-black/40"}
-                    text={name}
-                  />
+                    <WanaKanaWrapper
+                      parentClassName={"text-[6.4rem] w-fit text-black/40"}
+                      text={name}
+                    />
+                  </div>
                 </div>
-                </div>
-               
               </div>
               <div className="w-[75%]">
                 <img
@@ -58,7 +57,7 @@ const DetailsContainer = ({
                 />
               </div>
             </div>
-            <div className="w-[35%] h-full">
+            <div className="w-[35%] h-full relative">
               <div className="flex flex-row space-x-6">
                 {types.map((type, index) => {
                   return <PokemonTypeIcon key={index} type={type.type.name} />;
@@ -72,11 +71,11 @@ const DetailsContainer = ({
                   ))}
                 </div>
               </div>
+              <Paginator parentClassName={"absolute right-0 top-[25%]"} id={id} />
             </div>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
